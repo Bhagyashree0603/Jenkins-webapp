@@ -2,11 +2,11 @@ version: 0.2
 
 phases:
   install:
-   runtime-versions:git
-    nodejs: 22
-   commands:
-    -echo installing source NPM dependencies...
-    -npm install
+    runtime-versions:
+      nodejs: 22
+    commands:
+      -echo installing source NPM dependencies...
+      -npm install
   build:
    commands:
     -echo Build started on 'date'

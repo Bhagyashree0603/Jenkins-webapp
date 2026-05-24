@@ -24,6 +24,6 @@ phases:
 
 artifacts:
   files:
-   -'**/*'
+   - '**/*'
   base-directory: deploy 
   name: frontend-build

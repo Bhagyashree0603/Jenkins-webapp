@@ -21,9 +21,9 @@ phases:
     - cp -r scripts deploy/
     - chmod +x deploy/scripts/restartNginx.sh
     - chmod +x deploy/scripts/appStop.sh
-    
+
 artifacts:
   files:
    -'**/*'
-  base-directory: 'deploy'  
+  base-directory: deploy 
   name: frontend-build

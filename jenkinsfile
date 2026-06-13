@@ -53,7 +53,7 @@ pipeline{
 
             steps{
                 git branch:main ,
-                url: 'https://github.com/Bhagya0603/Jenkins-webapp1.git'
+                url: 'https://github.com/Bhagya0603/Jenkins-webapp..git'
             }
         }
         stage('Build Docker Image'){
@@ -68,7 +68,7 @@ pipeline{
             steps {
                 withCredential([
                     usernamePassword(
-                        credintialsId:'Dockercred'
+                        credintialsId:'DockerCred'
                         usernameVariable: 'DOCKER_USER'
                         passwordVariable: 'DOCKER-PASS'
 

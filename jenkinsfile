@@ -1,7 +1,7 @@
 pipeline{
     agent any 
     environment {
-        IMAGE_NAME ="Bhagya0603/frontend-app"
+        IMAGE_NAME ="Bhagyashree0603/frontend-app"
         IMAGE_TAG ="${BUILD_NUMBER}"
         APP_SERVER ="3.110.164.144"
     }
@@ -11,14 +11,14 @@ pipeline{
 
             steps{
                 git branch:main ,
-                url: 'https://github.com/Bhagya0603/Jenkins-webapp..git'
+                url: 'https://github.com/Bhagyashree0603/Jenkins-webapp.git'
             }
         }
-        stage('Build Docker Image'){
+        stage('Build docker Image'){
             steps {
 
                 sh '''
-                docker build -f Docker/dockerfile -t $IMAGE_NAME:$IMAGE_TAG .
+                docker build -f docker/dockerfile -t $IMAGE_NAME:$IMAGE_TAG .
                 '''
             }
         }

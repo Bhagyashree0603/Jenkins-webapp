@@ -2,14 +2,13 @@ pipeline{
     agent any
     stages{
         stage('Deployment'){
-
             steps{
                 sh """
                 scp docker-compose.yaml ubuntu@15.206.67.30:/home/ubuntu/
                 ssh ubuntu@15.206.67.30 '''
-                copy docker-compose.yaml /home/ubuntu/docker-compose.yaml
-                docker-compose -f /home/ubuntu/docker-compose.yaml down
-                docker-compose -f /home/ubuntu/docker-compose.yaml up
+                cd /home/ubuntu
+                docker-compose down
+                docker-compose up -d
                 '''
                 """
             }

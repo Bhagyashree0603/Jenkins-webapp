@@ -20,14 +20,14 @@ pipeline{
     agent any
     environment{
         AWS_REGION = 'ap-south-1'
-        ACCOUNT_ID = '235864148652'
+        ACCOUNT_ID = ' 235864148652'
         REPOSITORY = 'frontend'
         IMAGE_TAG = '${BUILD_NUMBER}'
         ECR_URI = "${ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${REPOSITORY}"
         ACCESS_KEY_ID = credentials('ACCESS_KEY_ID')
         SECRET_ACCESS_KEY = credentials('SECRET_ACCESS_KEY')
         CLUSTER_NAME = 'default'
-        SERVICE_NAME = 'frontend-9435'
+        SERVICE_NAME = 'frontend-a35e'
     }
     stages{
         stage('Checkout'){

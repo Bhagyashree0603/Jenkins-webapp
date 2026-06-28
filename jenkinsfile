@@ -24,8 +24,8 @@ pipeline{
         REPOSITORY = 'frontend'
         IMAGE_TAG = '${BUILD_NUMBER}'
         ECR_URI = "${235864148652}.dkr.ecr.${ap-south-1}.amazonaws.com/${REPOSITORY}:${IMAGE_TAG}"
-        ACCESS_KEY_ID = $ACCESS_KEY_ID
-        SECRET_ACCESS_KEY = $SECRET_ACCESS_KEY
+        ACCESS_KEY_ID = credentials(ACCESS_KEY_ID)
+        SECRET_ACCESS_KEY = credentials(SECRET_ACCESS_KEY)
         CLUSTER_NAME = 'default'
         SERVICE_NAME = 'frontend-a35e'
     }
